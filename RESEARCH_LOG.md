@@ -67,3 +67,15 @@ One row per card: name | printed cost/power | EP | short explanation | data conf
 3. How to weight plausible decks without making the rating entirely dependent on meta prevalence.
 4. How to approximate strategic equilibrium without assuming opponents know hidden cards.
 5. Whether energy-ratio normalization survives stress tests, or needs replacement with a marginal reference-power conversion.
+
+---
+
+## 2026-10-21 update: v0.8 formula and 39-card rerun
+
+**Active working formula**: `EP(card) = printed energy cost × mean(Shapley-attributed realized power | card played) / mean(Shapley-attributed effective energy cost | card played)`. Compare means before division; intermittent zero-cost plays don't create infinite scores. Plain English: fair share of resulting Power divided by fair share of useful Energy actually spent or sacrificed, normalized to the printed cost. Only genuine cooperative incremental output/cost needs Shapley allocation, not every independent printed-power point.
+
+**Pilot assumptions**: true multilateral Shapley calculation and play-by-play probabilities are **not available**. For genuine two-way cooperation only, assume even split of incremental synergy. For wasted energy, charge none if no useful alternative and proportionally share genuine sacrifice with other beneficiaries, e.g., Sunspot/She-Hulk. Add no fixed generic lane penalty; use each card's actual bot/drone placement possibilities and location outcomes. Exclude imagined superior alternative plays, deck win rates and card-draw consistency from EP.
+
+**Provisional 39-card results** saved to [`SIX_COST_SHAPLEY_RERUN_V08.md`](./SIX_COST_SHAPLEY_RERUN_V08.md). Anchors: Hulk 6/14; Doom 6/13 (hypothetical lane success); Hela 6/14.3; Knull 6/11; Ultron 6/21; She-Hulk 6/14.1; Sasquatch 6/15.5; Infinaut 6/16.4. These are **illustrative scenario estimates, not sampled conditional means**. Older v0.4, v0.6 and quick-pass numbers remain as history and should **not** be treated as the current research state.
+
+**Largest open methodological risk**: half-sharing every combo can underrate payoff cards whose enablers already had independent reasons to act (Knull, Zola, Gorr), while energy attribution remains a proxy rather than a calculated coalition value. We should examine cases before adding complexity; do not fit EP to popularity by fiat. Popularity is for discrepancies, not ground-truth EP.
