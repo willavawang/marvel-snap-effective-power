@@ -87,3 +87,22 @@ One row per card: name | printed cost/power | EP | short explanation | data conf
 The user identified a critical methodological distinction: the next source of error is likely **invented frequency/average inputs**, not necessarily the v0.8 formula. In particular, **Ultron 6/21 assumes 5.5 successful 2-Power drones plus 2 shared buff Power**, and **Orka 6/17 assumes an 85% lone-lane activation rate**. Neither figure was inferred from games. Orka may additionally have an unmeasured *cost of keeping a location empty*. Doctor Doom's assumed 65%/30%/5% distribution of two/one/zero DoomBots, Hela's 18 revived Power and half-sharing, and She-Hulk's 3.85 + 0.40 Energy assumptions are likewise unmeasured.
 
 **Research protocol clarification:** for every card, distinguish (1) verified game rule or stat, (2) observed gameplay frequency, (3) scenario assumption, (4) model/attribution convention. Show a small sensitivity calculation for the most important uncertain assumptions. Do not treat asterisked point estimates as measured expectations or as percentile ranges, and do not interpret deviations from popularity as market mispricing until assumption error is investigated. The shared formula and all current EP estimates remain **unchanged** by this note. A concrete input audit and sensitivity scenarios are at the top of [`SIX_COST_SHAPLEY_RERUN_V08.md`](./SIX_COST_SHAPLEY_RERUN_V08.md).
+
+---
+
+## Calibration philosophy — 2026-10-21
+
+**Working prior, not imposed result:** For ordinary six-cost cards, expect most credible conditional EP values to fall roughly **6/12–6/19**; outliers are allowed, but require unusually strong evidence or a clearly explained mechanism. Printed 6/14 Hulk is a useful baseline. This is a falsifiable plausibility range **not a mathematical constraint**, an empirical finding, or a substitute for actual per-play data.
+
+**Usage as a second, imperfect signal:** Current deck/card popularity contains information about effective strength, but confounds card ownership, availability, archetype popularity, novelty, unmet combo support, consistency of accessing the card, and metagame/counter prevalence. Thus popularity is **not** the same as expected power conditional on playing the card, nor is EP necessarily monotonic in popularity.
+
+**Calibration sequence when a card's estimated EP or usage looks anomalous:**
+1. Check current printed card stats and exact mechanics.
+2. Audit *assumed conditional frequencies* (open slots for Ultron and Doom, being alone for Orka, number/value of Anti-Polar Magneto summons, Hela resurrections, discounted energy costs), especially if numbers were merely made up as illustrations.
+3. Audit Shapley allocation of **power and energy**, distinguishing intrinsic outputs from genuine shared synergistic increments. Never simply halve every summoned/copied output by default.
+4. Review genuine condition/access costs and contextual obstacles: required supporting cards with low individual EP, location restrictions, limited space, ability to play the card at all, deck-building opportunity costs, and current metagame suitability.
+5. Only then consider whether the divergence is legitimate and the card is underused/overused. **Retain warranted outliers rather than force-fitting to the 12–19 prior or to usage.**
+
+**Examples motivating this protocol:** Ultron 6/21 rests on an unsupported mean of 5.5 drones plus 2 synergy power; Orka 6/17 assumes 85% lone-lane activation with unmeasured positional opportunity cost; Anti-Polar Magneto 6/11.5 rests on only 7 total additional power and mechanical 50/50 sharing, both questionable. These figures remain provisional; no score was revised through this calibration note.
+
+**Anti-circularity safeguard:** When available, estimate assumptions using independently observed gameplay outcomes and separately test whether the resulting EP correlates with usage. Do not use card popularity as the numerical input and then claim agreement with popularity independently validates the estimate.
