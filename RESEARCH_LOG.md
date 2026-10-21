@@ -6,7 +6,7 @@
 
 ## Core principles
 
-1. Display one headline rating: printed cost / EP (e.g. Hulk 6/12).
+1. Display one headline rating: printed cost / EP (e.g. Hulk 6/14).
 2. Evaluate conditional on the card actually being played in plausible competent decks; weight actual play timing, rather than discounting every card for not being drawn.
 3. Prefer observed frequencies; label simulations and assumptions. Pin a date/patch for card text and stats.
 4. Share synergy through Shapley-style marginal contributions with a consistent counterfactual replacement-card baseline. Never count the same generated power twice.
@@ -79,3 +79,11 @@ One row per card: name | printed cost/power | EP | short explanation | data conf
 **Provisional 39-card results** saved to [`SIX_COST_SHAPLEY_RERUN_V08.md`](./SIX_COST_SHAPLEY_RERUN_V08.md). Anchors: Hulk 6/14; Doom 6/13 (hypothetical lane success); Hela 6/14.3; Knull 6/11; Ultron 6/21; She-Hulk 6/14.1; Sasquatch 6/15.5; Infinaut 6/16.4. These are **illustrative scenario estimates, not sampled conditional means**. Older v0.4, v0.6 and quick-pass numbers remain as history and should **not** be treated as the current research state.
 
 **Largest open methodological risk**: half-sharing every combo can underrate payoff cards whose enablers already had independent reasons to act (Knull, Zola, Gorr), while energy attribution remains a proxy rather than a calculated coalition value. We should examine cases before adding complexity; do not fit EP to popularity by fiat. Popularity is for discrepancies, not ground-truth EP.
+
+---
+
+## 2026-10-21 calibration warning: assumed inputs dominate current numeric uncertainty
+
+The user identified a critical methodological distinction: the next source of error is likely **invented frequency/average inputs**, not necessarily the v0.8 formula. In particular, **Ultron 6/21 assumes 5.5 successful 2-Power drones plus 2 shared buff Power**, and **Orka 6/17 assumes an 85% lone-lane activation rate**. Neither figure was inferred from games. Orka may additionally have an unmeasured *cost of keeping a location empty*. Doctor Doom's assumed 65%/30%/5% distribution of two/one/zero DoomBots, Hela's 18 revived Power and half-sharing, and She-Hulk's 3.85 + 0.40 Energy assumptions are likewise unmeasured.
+
+**Research protocol clarification:** for every card, distinguish (1) verified game rule or stat, (2) observed gameplay frequency, (3) scenario assumption, (4) model/attribution convention. Show a small sensitivity calculation for the most important uncertain assumptions. Do not treat asterisked point estimates as measured expectations or as percentile ranges, and do not interpret deviations from popularity as market mispricing until assumption error is investigated. The shared formula and all current EP estimates remain **unchanged** by this note. A concrete input audit and sensitivity scenarios are at the top of [`SIX_COST_SHAPLEY_RERUN_V08.md`](./SIX_COST_SHAPLEY_RERUN_V08.md).
