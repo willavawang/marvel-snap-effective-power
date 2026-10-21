@@ -21,7 +21,7 @@ EP = printed power + expected direct power-equivalent effect when played, adjust
 | Gorr the God Butcher* | 6/13 | 1 + 2×6 assumed On Reveals in play |
 | Magneto* | 6/13 | Provisional: printed body + positional effect; requires current stat check |
 | Red Hulk* | 6/13 | Provisional: body plus typical gained power; requires current stat check |
-| Hulk | 6/12 | Exact printed-power baseline |
+| Hulk | 6/14 | Verified current printed-power baseline (buffed Dec 19, 2025) |
 | Sasquatch* | 6/11 | 11 printed; discounted energy does not automatically create power |
 | She-Hulk* | 6/10 | 10 printed; discount affects energy efficiency, not physical power; current stat needs verification |
 | Onslaught* | 6/10 | 8 body + modest assumed incremental Ongoing power; often much higher in synergy decks |
@@ -58,3 +58,7 @@ EP = printed power + expected direct power-equivalent effect when played, adjust
 - https://snap.fan/cards/history/2026/
 - https://snap.fan/changelog/
 - https://snap.fan/cards/
+
+## Correction — October 21, 2026
+
+Hulk is **6/14**, not 6/12, confirmed by Marvel Snap Zone (last changed December 19, 2025): https://marvelsnapzone.com/cards/hulk/ . Treat 6/14 as the current vanilla benchmark. The earlier six-cost pilot and research log use the outdated 6/12 figure and should be read with this correction. Doctor Doom's 6/15 is a maximum in ordinary open locations, not an average; provisional location-adjusted estimate 6/13 assumes bot placement probabilities of 85% and 75%, **not measured**.
