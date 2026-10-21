@@ -1,5 +1,7 @@
 # Six-cost Effective Power — v0.8 Shapley power AND energy rerun (2026-10-21)
 
+> **Primary limitation — statistical inputs, not necessarily the formula.** These 39 scores are *scenario outputs produced from unmeasured assumptions*. Values such as "5.5 Ultron drones per play," "Orka is alone 85% of the time," "18 Power revived by Hela," and "average She-Hulk energy paid 3.85" were selected as illustrations, **not inferred from game samples**. Consequently, the ranking has no statistical confidence intervals and **must not be used to diagnose market inefficiency or formula failure from popularity discrepancies** without first testing the assumptions. Printed card stats have a different evidence status from our assumed conditional frequencies, and observed Untapped popularity is not direct evidence of conditional power. Numbers are retained unchanged here for comparison; no formula or scores have been revised by this note.
+
 **Status: 39-card provisional back-of-the-envelope scenario estimates, not measurements.** This file supersedes the modeling assumptions of `SIX_COST_QUICK_PASS_2026-10-21.md`. It is intentionally a rough *stress test* of the proposed uniform statistic; no game-level played-card logs or actual Shapley coalition values have been obtained. `*` means estimation/variation concerns; no percentile ranges are asserted without observations.
 
 **Current formula v0.8:**
@@ -16,6 +18,30 @@ For a two-contributor interaction, genuine **incremental cooperative power** was
 For energy, assign *energy physically paid for the card* to it unless joint enablement changes that accounting, then split only **incremental genuinely forgone useful energy**, rather than charging the entire energy of enablers who made independently useful plays. This is a simplified Shapley-inspired proxy, not a computed Shapley energy characteristic function. Energy already wasted for lack of useful plays is zero sacrifice. Avoid crediting the same Sunspot gain as both She-Hulk's discount and Sunspot's power.
 
 **Usage comparator:** Untapped.gg observed *card popularity* (share of ranked matches in its tracked sample), last 30 days / Pool 3+ / roughly ranks 10–79, mostly October 18–21, 2026. Popularity is not conditional play rate, collection ownership-adjusted demand or win rate. Source: https://snap.untapped.gg/en/meta/cards-tier-list ; individual card pages such as https://snap.untapped.gg/en/meta/cards/hela and https://snap.untapped.gg/en/meta/cards/she-hulk . Inputs rounded and occasionally from prior crawl, so interpret ~ not precise.
+
+## Assumption audit — what is actually driving the scores?
+
+The **card text/printed stats** are verifiable rules; the **frequencies, means, combo values and Shapley shares** below are *guesses*. We should treat the latter as the leading source of error until play-level observations suggest otherwise.
+
+| Card | Model input we assumed | Evidence status | What would validate it? |
+|---|---|---|---|
+| **Ultron (6/21)** | Average **5.5** available drone slots, plus **2** attributed bonus Power from allied boosts | Neither number measured; potentially optimistic jointly, since support bodies also occupy slots | Actual open squares and resulting drone Power in games where Ultron is played, with/without support |
+| **Orka (6/17)** | **85%** of Orka plays end with him alone in his lane | Not observed; the setup may also sacrifice other lane occupancy/placement value | Fraction of Orka plays triggering +7, and effects on other actual plays |
+| **Doctor Doom (6/13)** | **65% two bots / 30% one / 5% zero** | Invented outcome distribution, not measured | Count successfully added DoomBots and their location-adjusted Power by actual play |
+| **Hela (6/14.3)** | **18** Power successfully revived, **50%** of cooperative gain attributed to Hela, **0.3** additional energy cost | Both mean resurrection and Shapley share assumed; the 50/50 is only a two-party heuristic | Actual resurrection results and coalition/counterfactual contribution analysis |
+| **Knull (6/11)** | **22** destroyed Power in games where Knull is played, **50%** shared with destruction engine | Unmeasured conditional mean and uncomputed Shapley share | Histograms of destroyed Power on actual Knull plays and coalition analysis |
+| **She-Hulk (6/14.1)** | **3.85** mean Energy paid plus **0.40** incremental useful-energy sacrifice | Neither estimated from actual play records | Paid-cost histogram and attribution of genuinely useful foregone previous-turn energy |
+| **Infinaut (6/16.4)** | **1.3** useful energy-equivalents sacrificed by turn-5 pass, in addition to 6 spent | Subjective assumption | Observe passes, alternate playable cards, other beneficiaries, and cheat-out frequency |
+| **Sasquatch (6/15.5)** | **4.15** mean Energy paid plus **0.10** shared setup cost | Subjective assumption | Discount distributions and prior-turn played-card evidence |
+
+### Sensitivity checks (alternative hypothetical scenarios, **not percentile ranges**)
+
+- **Ultron:** assuming the same +2 synergy credit, if he adds **3** drones instead of 5.5, EP is **6/16**; at **4** drones, **6/18**; at **5.5**, **6/21**. Dropping the synergy credit lowers all three by 2.
+- **Orka:** if his +7 activates on **40% / 60% / 85%** of his plays, EP is **6/13.8 / 6/15.2 / 6/17** respectively, *before* considering any attributable cost of preserving an empty lane. The cost of leaving a lane unused is not measured here.
+- **She-Hulk:** with 10 attributed Power, changing assumed mean effective energy from **3.85** to **4.25** to **5.0** moves her EP from **6/15.6** to **6/14.1** to **6/12**. These are alternatives, not statistical uncertainty limits.
+- **Hela:** holding revived Power at 18 and mean effective energy at 6.3, assigning Hela **30% / 50% / 70%** of the additional resurrection contribution gives approximately **6/10.9 / 6/14.3 / 6/17.7**. The attribution assumption alone radically changes her rank.
+
+**Interpretation:** these spreads are *sensitivity to our chosen inputs*, not randomness in card performance and not 10th–90th percentile outcome ranges. Before changing the shared formula or explaining an apparent popularity mismatch, audit the assumed inputs in the offending card's own calculation. Our model's *structural* weaknesses (e.g. location destruction and movement) remain separate from this *estimation* problem.
 
 ## Results (sorted by v0.8 EP)
 
