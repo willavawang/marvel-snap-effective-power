@@ -116,3 +116,9 @@ See [`SIX_COST_ASSUMPTIONS_V09.md`](./SIX_COST_ASSUMPTIONS_V09.md) for all **39*
 Key revisions: Ultron **6/21 → 6/16** (5.5→3.5 drones plus less assumed allied synergy), Orka **6/17 → 6/15.6** (85%→65% solo activation), Anti-Polar Magneto **6/11.5 → 6/15.4** (1.65 summons ×6 assumed Power ×75% attribution), Knull **6/11 → 6/14.4** (20 assumed destroyed Power ×72% attribution), Arnim Zola **6/7 → 6/12** (15 net copied Power ×80% attribution). **These assumption changes are hypotheses, not observational discoveries**, and were made to examine implausible prior outputs; don't claim improved fit to usage as independent validation.
 
 The prior six-cost rough range 6/12–19 remains a *sanity check*, never a hard cap/floor or a mandate to shift values toward popularity. Particularly, Galactus and Living Tribunal reveal structural missing dimensions rather than necessarily bad conditional Power assumptions.
+
+---
+
+## October 21: assumption-ledger rerun (v0.8 unchanged)
+
+[Complete 39-card ranking and assumptions](./SIX_COST_ASSUMPTION_LEDGER_V08_2026-10-21.md) now provides one row per candidate with assumed mean attributed Power, mean effective Energy, exact calculation, observed popularity comparator, unmeasured scenario assumptions, and an input/model risk flag. This file **supersedes the earlier v0.8 scenario inputs** without changing the formula. Illustrative revisions include Ultron 6/21 → **6/17**, Orka 6/17 → **6/15.6**, Doom 6/13 → **6/12.5**, Anti-Polar Magneto 6/11.5 → **6/15.2**, and Knull 6/11 → **6/13.2**. None are observed conditional power means. **6/12–19 is a calibration prior, not a cap; popularity is comparison data, not an input.** True multiparty Shapley calculations have not yet been computed. Sources and detailed assumptions in linked file.
