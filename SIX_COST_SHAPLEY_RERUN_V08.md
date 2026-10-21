@@ -87,6 +87,14 @@ The **card text/printed stats** are verifiable rules; the **frequencies, means, 
 | 38 | Taskmaster | 6/0 | **6/6.5*** | 6/13 | 2.2% | 6.5 | 6 | Assume previous allied card 13 Power; half of copied-output synergy allocated to Taskmaster |
 | 39 | Galactus | 6/6 | **6/6*** | 6/6 | 2.9% | 6 | 6 | 6 body; destroying locations changes the game objective, not representable by global added Power |
 
+### Anti-Polar Magneto: under-attribution audit (2026-10-21)
+
+**The existing 6/11.5* is likely an under-estimate, NOT a validated mean. It has not been silently revised.** Current text is 6/8: “On Reveal: Add a 3 or 4-Cost card from your hand to each other location.” This can deploy two extra 3/4-cost cards (6–8 printed energy worth) for the same six-energy turn, subject to hand contents, location room and effects. Example bodies 3/5 plus 4/7 yield **8 + 5 + 7 = 20 raw Power**, excluding those cards' possible abilities. Previous assumption of only *7 total* additional Power from both summons was not data-derived.
+
+A two-contributor Shapley example treating the pair of summoned cards as a **single bundle**, with value functions v(M)=8, v(bundle)=0 on a constrained final turn, and v(M+bundle)=20, allocates **14 power to Magneto and 6 to the bundle**. This *conditional example* already exceeds the earlier 11.5, before any other synergistic ability effects. **It does not establish a new average EP of 14 or 20**: some Magneto plays add one or zero cards, the independent options/costs of keeping cards in hand matter, and Shapley allocation depends on the game-state counterfactual. But simply halving an arbitrary 7-point summoned output is indefensible.
+
+**Next measurement:** distribution of zero, one, or two successfully added cards when Magneto is played; mean printed/ability-adjusted Power of those cards; whether holding them in hand imposed a useful-resource cost; marginal coalitional Power **and** energy with and without Magneto, each summoned card, and relevant enablers. Treat body Power and saved payment in a consistent attribution baseline. Source: https://snap.fan/cards/AntiPolarMagneto/ (6/8 since October 15, 2026).
+
 ## Largest changes from previous quick pass
 
 - **Knull**: 6/22 → **6/11** (-11 EP): Half of assumed 22 destroyed-power pool credited to payoff, half to destroy engine
