@@ -106,3 +106,13 @@ The user identified a critical methodological distinction: the next source of er
 **Examples motivating this protocol:** Ultron 6/21 rests on an unsupported mean of 5.5 drones plus 2 synergy power; Orka 6/17 assumes 85% lone-lane activation with unmeasured positional opportunity cost; Anti-Polar Magneto 6/11.5 rests on only 7 total additional power and mechanical 50/50 sharing, both questionable. These figures remain provisional; no score was revised through this calibration note.
 
 **Anti-circularity safeguard:** When available, estimate assumptions using independently observed gameplay outcomes and separately test whether the resulting EP correlates with usage. Do not use card popularity as the numerical input and then claim agreement with popularity independently validates the estimate.
+
+---
+
+## 2026-10-21 — v0.9 assumption-first full six-cost rerun
+
+See [`SIX_COST_ASSUMPTIONS_V09.md`](./SIX_COST_ASSUMPTIONS_V09.md) for all **39** conditional scenario EP estimates, each with **explicit mean Power, mean Energy, and the assumptions supplying them**, plus the previous estimate and tracked popularity. **The v0.8 formula did not change.** Scores are back-of-envelope scenarios with unmeasured input frequencies, not empirical means. The Shapley share remains a modeling heuristic because game-level coalitional values are unavailable.
+
+Key revisions: Ultron **6/21 → 6/16** (5.5→3.5 drones plus less assumed allied synergy), Orka **6/17 → 6/15.6** (85%→65% solo activation), Anti-Polar Magneto **6/11.5 → 6/15.4** (1.65 summons ×6 assumed Power ×75% attribution), Knull **6/11 → 6/14.4** (20 assumed destroyed Power ×72% attribution), Arnim Zola **6/7 → 6/12** (15 net copied Power ×80% attribution). **These assumption changes are hypotheses, not observational discoveries**, and were made to examine implausible prior outputs; don't claim improved fit to usage as independent validation.
+
+The prior six-cost rough range 6/12–19 remains a *sanity check*, never a hard cap/floor or a mandate to shift values toward popularity. Particularly, Galactus and Living Tribunal reveal structural missing dimensions rather than necessarily bad conditional Power assumptions.
